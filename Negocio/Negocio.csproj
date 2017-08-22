@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contexts\GenericContext.cs" />
+    <Compile Include="DAO\GenericDAO.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\GenericModel.cs" />
     <Compile Include="Models\Movimento.cs" />
@@ -60,8 +62,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Contexts\" />
-    <Folder Include="Entities\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,5 +8,6 @@ namespace Negocio.Models
 {
     public interface GenericModel
     {
+
     }
 }
