@@ -12,7 +12,6 @@ namespace Negocio.Models
     {
         [Key]
         public long IdProduto { get; set; }
-
         public long IdCategoria { get; set; }
         public string Descricao { get; set; }
         [ForeignKey(name:"IdCategoria")]
