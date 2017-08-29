@@ -16,13 +16,20 @@ namespace Negocio.DAO
     //TEntity implementa Entidade Genérica
     public class GenericDAO <TEntity> : IDisposable where TEntity : GenericModel 
     {
-        // Verificar como podemos fazer para que o projeto suporte mais de um contexto
-        // Dessa maneira ficamos limitados a um contexto
-        GenericContext context = new GenericContext();
+        //Verificar como podemos fazer para que o projeto suporte mais de um contexto
+        //Dessa maneira ficamos limitados a um contexto
+        //GenericContext context = new GenericContext();
+
+        private GenericContext context;
+
+        public GenericDAO(GenericContext context)
+        {
+            this.context = context;
+        }
 
         public void Insert(TEntity entity)
         {
-            // SET é um método que representa o DbSet que logo representa a nossa tabela
+            //SET é um método que representa o DbSet que logo representa a nossa tabela
             //DBSet são collections
             context.Set<TEntity>().Add(entity);
 
