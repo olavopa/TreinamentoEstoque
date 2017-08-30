@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contexts\EstoqueContext.cs" />
     <Compile Include="Contexts\GenericContext.cs" />
     <Compile Include="DAO\GenericDAO.cs" />
     <Compile Include="Models\Categoria.cs" />
