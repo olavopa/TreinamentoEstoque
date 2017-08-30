@@ -53,9 +53,19 @@ namespace Negocio.DAO
 
         }
 
+        public TEntity FindById(long id)
+        {
+            return context.Set<TEntity>().Find(id);
+        }
+
+        public IEnumerable<TEntity> ListAll()
+        {
+            return context.Set<TEntity>().ToList();
+        }
+
         public void Dispose()
         {
-
+            context.Dispose();
         }
     }
 }

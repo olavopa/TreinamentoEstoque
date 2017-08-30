@@ -11,20 +11,10 @@ namespace Negocio.Contexts
     public class GenericContext : DbContext
     {
         //Construtor passando a connection string para a classe mãe DbContext (base)
-        public GenericContext() : base ("TreinamentoEstoque")
+        public GenericContext(string context) : base (context)
         {
             
         }
-        //O contexto é um espelho/reflexo do Banco de Dados
-
-        //Tabelas do BD
-        //Public - ficará acessivel em todo projeto
-
-       public DbSet<Produto> Produto;
-
-       public DbSet<Categoria> Categoria;
-
-       public DbSet<Movimento> Movimento;
 
     }
 }
