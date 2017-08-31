@@ -11,8 +11,9 @@ namespace Negocio.Contexts
     public class EstoqueContext : GenericContext
     {
         // ESTOQUE SE REFERE AO BANCO DE DADOS TREINAMENTO ESTOQUE E ESTÁ PASSANDO O CONTEXTO
-        // PARA A GENERIC CONTEXT QUE ESPERA UM CONTEXTO ESPECÍFICO
-        public EstoqueContext() : base ("TreinamentoEstoque"){
+        // PARA A GENERIC CONTEXT QUE ESPERA UMA CONNECTION STRING
+        public EstoqueContext()
+        {
         
         }
 

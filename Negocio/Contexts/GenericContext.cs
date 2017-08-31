@@ -11,9 +11,15 @@ namespace Negocio.Contexts
     public class GenericContext : DbContext
     {
         //Construtor passando a connection string para a classe mãe DbContext (base)
-        public GenericContext(string context) : base (context)
+        public GenericContext(string connectionString) : base (connectionString)
         {
             
+        }
+
+        //Valor Padrão da Connection String
+        public GenericContext(): this("TreinamentoEstoque")
+        {
+
         }
 
     }

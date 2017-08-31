@@ -17,27 +17,30 @@ namespace Negocio.Services
     **  A GENERIC SERVICE ESTÁ RECEBENDO UMA ENTIDADE GENÉRICA (MODEL)
     **  IMPLEMENTANDO IDISPOSABLE 
     */
-    public class GenericService<TEntity> : IDisposable where TEntity : GenericModel
+    public class GenericService<TEntity> where TEntity : GenericModel
     {
-        private GenericDAO<TEntity> dao;
+        protected GenericDAO<TEntity> dao;
 
-        public GenericService(TEntity entity)
+        public GenericService(GenericDAO<TEntity> dao)
         {
-
+            this.dao = dao;
         }
 
         public void Insert(TEntity entity)
         {
+            Validate(entity);
             dao.Insert(entity);
         }
 
         public void Delete(TEntity entity)
         {
+            Validate(entity);
             dao.Delete(entity);
         }
 
         public void Update(TEntity entity)
         {
+            Validate(entity);
             dao.Update(entity);
         }
 
@@ -51,9 +54,10 @@ namespace Negocio.Services
             dao.ListAll();
         }
 
-        public void Dispose()
+        public void Validate(TEntity entity)
         {
 
         }
+
     }
 }
