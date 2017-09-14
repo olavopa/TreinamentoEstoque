@@ -44,14 +44,14 @@ namespace Negocio.Services
             dao.Update(entity);
         }
 
-        public void FindById(int id)
+        public TEntity FindById(int id)
         {
-            dao.FindById(id);
+            return dao.FindById(id);
         }
 
-        public void ListAll()
+        public IEnumerable<TEntity> ListAll()
         {
-            dao.ListAll();
+            return dao.ListAll();
         }
 
         public void Validate(TEntity entity)
